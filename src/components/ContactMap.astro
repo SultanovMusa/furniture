@@ -1,0 +1,134 @@
+---
+---
+
+<section class="section contact-map parallax-section" id="map" data-parallax-speed="0.15">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Location</h2>
+            <p>Visit our showroom to see our furniture in person</p>
+        </div>
+        <div class="map-container">
+            <div class="map-wrapper">
+                <iframe
+										src="https://yandex.ru/map-widget/v1/?um=constructor%3A867cef52bd481102f9e4ffcd6cdf89c060c814c340d143a1076e4950e86c8da1&amp;source=constructor"
+										width="600"
+										height="400"
+										frameBorder="0"></iframe>
+            </div>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>Visit Our Showroom</h3>
+                    <p><strong>Address:</strong> 100 Lenin Street, Bishkek, Kyrgyzstan</p>
+                    <p><strong>Phone:</strong> +996 555 123 456</p>
+                    <p><strong>Email:</strong> info@furnituremaster.kg</p>
+                    <div class="hours">
+                        <h4>Working Hours:</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                    <a href="tel:+996555123456" class="btn">Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact-map {
+        background-color: var(--bg-color);
+        position: relative;
+    }
+    
+    .contact-map::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.05;
+        z-index: -1;
+    }
+
+    .map-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        background-color: var(--card-bg);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    
+    .map-container:hover {
+        box-shadow: 0 10px 25px var(--shadow-color);
+        transform: translateY(-5px);
+    }
+
+    .map-wrapper {
+        height: 100%;
+        min-height: 450px;
+    }
+
+    .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .contact-info {
+        background-color: var(--card-bg);
+    }
+
+    .contact-card {
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+    }
+
+    .contact-card h3 {
+        font-size: 24px;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .contact-card p {
+        margin-bottom: 15px;
+        color: var(--text-color);
+    }
+
+    .hours {
+        margin: 20px 0;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .hours h4 {
+        font-size: 18px;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .contact-card .btn {
+        margin-top: auto;
+        align-self: flex-start;
+    }
+
+    @media (max-width: 768px) {
+        .map-container {
+            grid-template-columns: 1fr;
+        }
+
+        .map-wrapper iframe {
+            border-radius: 8px 8px 0 0;
+            height: 300px;
+        }
+    }
+</style>

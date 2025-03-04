@@ -1,0 +1,86 @@
+---
+---
+
+<section class="section about parallax-section" id="about" data-parallax-speed="0.2">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Our Store</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="Furniture workshop">
+            </div>
+            <div class="about-text">
+                <p>FurnitureMaster is a company with many years of experience in manufacturing and selling high-quality furniture. We started our journey more than 10 years ago with a small workshop, and today we are one of the market leaders.</p>
+                
+                <p>Our mission is to create beautiful, functional, and durable furniture that makes our customers' lives more comfortable and cozy. We pay special attention to details and use only environmentally friendly materials of the highest quality.</p>
+                
+                <p>We employ professional designers and craftsmen with many years of experience who will help bring any of your ideas to life. We are proud of our work and satisfied customers who return to us again and again.</p>
+                
+                <p>Our range includes furniture for all spaces: living rooms, bedrooms, kitchens, children's rooms, offices, and public spaces. You can choose ready-made solutions from our catalog or order a custom project.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about {
+        position: relative;
+    }
+    
+    .about::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.05;
+        z-index: -1;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px var(--shadow-color);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    
+    .about-image:hover img {
+        transform: scale(1.02);
+        box-shadow: 0 15px 40px var(--shadow-color);
+    }
+
+    .about-text p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text-color);
+    }
+
+    .about-text p:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            grid-template-columns: 1fr;
+        }
+
+        .about-image {
+            order: -1;
+        }
+    }
+</style>

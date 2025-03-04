@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en" class="light-mode">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<title>FurnitureMaster - Quality Furniture Store</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header-content">
+					<a href="/" class="logo">FurnitureMaster</a>
+					<nav class="main-nav">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#works">Our Works</a></li>
+							<li><a href="#map">Location</a></li>
+							<li><a href="#contacts">Contacts</a></li>
+						</ul>
+					</nav>
+					<div class="header-right">
+						<div class="language-switcher">
+							<button class="current-lang">EN</button>
+							<div class="lang-dropdown">
+								<a href="#" data-lang="en" class="active">English</a>
+								<a href="#" data-lang="ru">Русский</a>
+								<a href="#" data-lang="kg">Кыргызча</a>
+							</div>
+						</div>
+						<button class="theme-toggle" aria-label="Toggle dark mode">
+							<svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="5"></circle>
+								<line x1="12" y1="1" x2="12" y2="3"></line>
+								<line x1="12" y1="21" x2="12" y2="23"></line>
+								<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+								<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+								<line x1="1" y1="12" x2="3" y2="12"></line>
+								<line x1="21" y1="12" x2="23" y2="12"></line>
+								<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+								<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+							</svg>
+							<svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+							</svg>
+						</button>
+						<button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-menu">
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#works">Our Works</a></li>
+						<li><a href="#map">Location</a></li>
+						<li><a href="#contacts">Contacts</a></li>
+					</ul>
+				</nav>
+				<div class="mobile-menu-bottom">
+					<div class="mobile-language">
+						<button data-lang="en" class="active">EN</button>
+						<button data-lang="ru">RU</button>
+						<button data-lang="kg">KG</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main>
+			<slot />
+		</main>
+		
+		<footer class="footer" id="contacts">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-col">
+						<h3>About FurnitureMaster</h3>
+						<p>We create quality furniture with attention to detail and care for our customers. FurnitureMaster is a guarantee of quality, reliability, and an individual approach to each order.</p>
+					</div>
+					<div class="footer-col">
+						<h3>Contacts</h3>
+						<ul class="contact-list">
+							<li>Address: 100 Lenin Street, Bishkek</li>
+							<li>Phone: +996 555 123 456</li>
+							<li>Email: info@furnituremaster.kg</li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h3>Working Hours</h3>
+						<ul class="hours-list">
+							<li><span>Mon-Fri:</span> 9:00 AM - 6:00 PM</li>
+							<li><span>Sat:</span> 10:00 AM - 4:00 PM</li>
+							<li><span>Sun:</span> Closed</li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h3>Navigation</h3>
+						<ul class="footer-nav">
+							<li><a href="/">Home</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#map">Location</a></li>
+							<li><a href="#contacts">Contacts</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>© 2025 FurnitureMaster. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--primary-color: #3a5a40;
+		--secondary-color: #a3b18a;
+		--accent-color: #588157;
+		--text-color: #333;
+		--light-color: #f5f5f5;
+		--dark-color: #222;
+		--gray-color: #888;
+		--border-color: #ddd;
+		--bg-color: #ffffff;
+		--card-bg: #ffffff;
+		--header-bg: #ffffff;
+		--footer-bg: #222;
+		--footer-text: #ccc;
+		--shadow-color: rgba(0, 0, 0, 0.1);
+	}
+
+	html.dark-mode {
+		--primary-color: #588157;
+		--secondary-color: #a3b18a;
+		--accent-color: #3a5a40;
+		--text-color: #e0e0e0;
+		--light-color: #333;
+		--dark-color: #f5f5f5;
+		--gray-color: #aaa;
+		--border-color: #444;
+		--bg-color: #121212;
+		--card-bg: #1e1e1e;
+		--header-bg: #1a1a1a;
+		--footer-bg: #0a0a0a;
+		--footer-text: #bbb;
+		--shadow-color: rgba(0, 0, 0, 0.3);
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: 'Poppins', sans-serif;
+		color: var(--text-color);
+		line-height: 1.6;
+		background-color: var(--bg-color);
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	.btn {
+		display: inline-block;
+		background-color: var(--primary-color);
+		color: white;
+		padding: 12px 24px;
+		border-radius: 4px;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		border: none;
+		cursor: pointer;
+	}
+
+	.btn:hover {
+		background-color: var(--accent-color);
+	}
+
+	.section {
+		padding: 80px 0;
+		background-color: var(--bg-color);
+	}
+
+	.section-title {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.section-title h2 {
+		font-size: 36px;
+		margin-bottom: 15px;
+		color: var(--primary-color);
+	}
+
+	.section-title p {
+		font-size: 18px;
+		color: var(--gray-color);
+	}
+
+	/* Header Styles */
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: var(--header-bg);
+		box-shadow: 0 2px 10px var(--shadow-color);
+		z-index: 1000;
+		transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.header-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+	}
+
+	.logo {
+		font-size: 24px;
+		font-weight: 700;
+		color: var(--primary-color);
+	}
+
+	.main-nav ul {
+		display: flex;
+		gap: 30px;
+	}
+
+	.main-nav a {
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.main-nav a:hover {
+		color: var(--accent-color);
+	}
+
+	.header-right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	/* Theme Toggle */
+	.theme-toggle {
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: var(--text-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		border-radius: 50%;
+		transition: background-color 0.3s ease;
+	}
+
+	.theme-toggle:hover {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+	html.dark-mode .theme-toggle:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.sun-icon, .moon-icon {
+		width: 24px;
+		height: 24px;
+		transition: opacity 0.3s ease, transform 0.5s ease;
+	}
+
+	html:not(.dark-mode) .moon-icon {
+		display: block;
+		opacity: 1;
+	}
+
+	html:not(.dark-mode) .sun-icon {
+		display: none;
+		opacity: 0;
+	}
+
+	html.dark-mode .sun-icon {
+		display: block;
+		opacity: 1;
+	}
+
+	html.dark-mode .moon-icon {
+		display: none;
+		opacity: 0;
+	}
+
+	/* Language Switcher */
+	.language-switcher {
+		position: relative;
+	}
+
+	.current-lang {
+		background: none;
+		border: 1px solid var(--border-color);
+		border-radius: 4px;
+		padding: 6px 12px;
+		font-weight: 500;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		color: var(--text-color);
+		transition: border-color 0.3s ease, color 0.3s ease;
+	}
+
+	.current-lang::after {
+		content: '▼';
+		font-size: 10px;
+		margin-left: 5px;
+	}
+
+	.lang-dropdown {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: var(--card-bg);
+		border-radius: 4px;
+		box-shadow: 0 5px 15px var(--shadow-color);
+		padding: 10px 0;
+		min-width: 120px;
+		display: none;
+		z-index: 10;
+		transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.language-switcher:hover .lang-dropdown {
+		display: block;
+	}
+
+	.lang-dropdown a {
+		display: block;
+		padding: 8px 15px;
+		transition: background-color 0.3s ease;
+		color: var(--text-color);
+	}
+
+	.lang-dropdown a:hover {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+	html.dark-mode .lang-dropdown a:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	.lang-dropdown a.active {
+		color: var(--primary-color);
+		font-weight: 500;
+	}
+
+	/* Mobile Menu */
+	.mobile-menu-btn {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		z-index: 1001;
+	}
+
+	.mobile-menu-btn span {
+		display: block;
+		width: 25px;
+		height: 3px;
+		background-color: var(--text-color);
+		margin: 5px 0;
+		transition: all 0.3s ease;
+	}
+
+	.mobile-menu-btn.active span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.mobile-menu-btn.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.mobile-menu-btn.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
+	}
+
+	.mobile-menu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 80%;
+		max-width: 320px;
+		height: 100vh;
+		background-color: var(--card-bg);
+		box-shadow: -5px 0 15px var(--shadow-color);
+		z-index: 1000;
+		padding: 100px 30px 30px;
+		transition: right 0.3s ease;
+		overflow-y: auto;
+	}
+
+	.mobile-menu.active {
+		right: 0;
+	}
+
+	.mobile-menu nav ul {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.mobile-menu nav a {
+		font-size: 18px;
+		font-weight: 500;
+		display: block;
+		padding: 10px 0;
+		border-bottom: 1px solid var(--border-color);
+		transition: color 0.3s ease;
+	}
+
+	.mobile-menu nav a:hover {
+		color: var(--accent-color);
+	}
+
+	.mobile-menu-bottom {
+		margin-top: 40px;
+		padding-top: 20px;
+		border-top: 1px solid var(--border-color);
+	}
+
+	.mobile-language {
+		display: flex;
+		gap: 10px;
+	}
+
+	.mobile-language button {
+		background: none;
+		border: 1px solid var(--border-color);
+		border-radius: 4px;
+		padding: 8px 12px;
+		font-weight: 500;
+		cursor: pointer;
+		color: var(--text-color);
+		transition: all 0.3s ease;
+	}
+
+	.mobile-language button.active {
+		background-color: var(--primary-color);
+		color: white;
+		border-color: var(--primary-color);
+	}
+
+	/* Footer Styles */
+	.footer {
+		background-color: var(--footer-bg);
+		color: var(--footer-text);
+		padding: 60px 0 20px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 30px;
+		margin-bottom: 40px;
+	}
+
+	.footer-col h3 {
+		font-size: 20px;
+		margin-bottom: 20px;
+		color: var(--secondary-color);
+	}
+
+	.footer-col p, .footer-col li {
+		margin-bottom: 10px;
+		color: var(--footer-text);
+	}
+
+	.contact-list li, .hours-list li {
+		display: flex;
+		margin-bottom: 10px;
+	}
+
+	.hours-list span {
+		font-weight: 600;
+		margin-right: 10px;
+		color: white;
+	}
+
+	.footer-nav li {
+		margin-bottom: 10px;
+	}
+
+	.footer-nav a:hover {
+		color: var(--secondary-color);
+	}
+
+	.copyright {
+		text-align: center;
+		padding-top: 20px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		color: #999;
+	}
+
+	/* Parallax Effect */
+	.parallax-section {
+		position: relative;
+		overflow: hidden;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	/* Responsive Styles */
+	@media (max-width: 768px) {
+		.main-nav {
+			display: none;
+		}
+
+		.mobile-menu-btn {
+			display: block;
+		}
+
+		.section {
+			padding: 60px 0;
+		}
+
+		.section-title h2 {
+			font-size: 28px;
+		}
+
+		.language-switcher {
+			display: none;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Mobile menu toggle
+		const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+		const mobileMenu = document.querySelector('.mobile-menu');
+		const body = document.body;
+
+		if (mobileMenuBtn && mobileMenu) {
+			mobileMenuBtn.addEventListener('click', () => {
+				mobileMenuBtn.classList.toggle('active');
+				mobileMenu.classList.toggle('active');
+				body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+			});
+
+			// Close mobile menu when clicking on a link
+			const mobileLinks = mobileMenu.querySelectorAll('a');
+			mobileLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					mobileMenuBtn.classList.remove('active');
+					mobileMenu.classList.remove('active');
+					body.style.overflow = '';
+				});
+			});
+		}
+
+		// Theme toggle functionality
+		const themeToggle = document.querySelector('.theme-toggle');
+		const htmlElement = document.documentElement;
+		
+		// Check for saved theme preference or use preferred color scheme
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme) {
+			htmlElement.classList.toggle('dark-mode', savedTheme === 'dark');
+		} else {
+			// Check if user prefers dark mode
+			const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			htmlElement.classList.toggle('dark-mode', prefersDarkMode);
+		}
+
+		if (themeToggle) {
+			themeToggle.addEventListener('click', () => {
+				htmlElement.classList.toggle('dark-mode');
+				
+				// Save theme preference
+				const currentTheme = htmlElement.classList.contains('dark-mode') ? 'dark' : 'light';
+				localStorage.setItem('theme', currentTheme);
+			});
+		}
+
+		// Language switcher functionality
+		const setupLanguageSwitcher = (selector, currentLangElement) => {
+			const langLinks = document.querySelectorAll(selector);
+			
+			langLinks.forEach(link => {
+				link.addEventListener('click', (e) => {
+					e.preventDefault();
+					const lang = link.getAttribute('data-lang');
+					
+					// Update active class
+					langLinks.forEach(l => l.classList.remove('active'));
+					link.classList.add('active');
+					
+					// Update current language button if it exists
+					if (currentLangElement) {
+						currentLangElement.textContent = lang.toUpperCase();
+					}
+					
+					// Save language preference
+					localStorage.setItem('language', lang);
+					
+					// Update all language selectors to match
+					document.querySelectorAll('[data-lang]').forEach(el => {
+						if (el.getAttribute('data-lang') === lang) {
+							el.classList.add('active');
+						} else {
+							el.classList.remove('active');
+						}
+					});
+					
+					// In a real implementation, you would reload content in the selected language
+					console.log(`Language changed to: ${lang}`);
+				});
+			});
+		};
+
+		// Setup desktop language switcher
+		setupLanguageSwitcher('.lang-dropdown a', document.querySelector('.current-lang'));
+		
+		// Setup mobile language switcher
+		setupLanguageSwitcher('.mobile-language button');
+		
+		// Load saved language preference
+		const savedLanguage = localStorage.getItem('language') || 'en';
+		document.querySelectorAll('[data-lang]').forEach(el => {
+			if (el.getAttribute('data-lang') === savedLanguage) {
+				el.classList.add('active');
+				
+				// Update current language display
+				const currentLang = document.querySelector('.current-lang');
+				if (currentLang) {
+					currentLang.textContent = savedLanguage.toUpperCase();
+				}
+			} else {
+				el.classList.remove('active');
+			}
+		});
+
+		// Parallax effect for sections with parallax class
+		const parallaxSections = document.querySelectorAll('.parallax-section');
+		
+		if (parallaxSections.length > 0) {
+			window.addEventListener('scroll', () => {
+				parallaxSections.forEach(section => {
+					const scrollPosition = window.pageYOffset;
+					const sectionTop = section.offsetTop;
+					const sectionHeight = section.offsetHeight;
+					
+					// Only apply parallax if section is in view
+					if (scrollPosition > sectionTop - window.innerHeight && 
+						scrollPosition < sectionTop + sectionHeight) {
+						const speed = section.getAttribute('data-parallax-speed') || 0.5;
+						const yPos = -(scrollPosition - sectionTop) * speed;
+						section.style.backgroundPositionY = `${yPos}px`;
+					}
+				});
+			});
+		}
+	});
+</script>

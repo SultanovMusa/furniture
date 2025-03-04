@@ -1,0 +1,101 @@
+---
+---
+
+<section class="section works" id="works">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Works</h2>
+            <p>Examples of furniture created by our craftsmen for satisfied customers</p>
+        </div>
+        <div class="works-grid">
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Modern Living Room">
+                </div>
+                <div class="work-content">
+                    <h3>Modern Living Room</h3>
+                    <p>A comprehensive solution for a living room with a modular storage system and ergonomic soft furniture for a family of 4.</p>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80" alt="Kitchen Set">
+                </div>
+                <div class="work-content">
+                    <h3>Kitchen Set</h3>
+                    <p>A functional kitchen in Scandinavian style with convenient storage systems and premium built-in appliances.</p>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Premium Bedroom">
+                </div>
+                <div class="work-content">
+                    <h3>Premium Bedroom</h3>
+                    <p>An elegant bedroom with a massive solid wood bed, spacious sliding wardrobe, and bedside tables.</p>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Office Furniture">
+                </div>
+                <div class="work-content">
+                    <h3>Office Furniture</h3>
+                    <p>An ergonomic workspace for a modern office with modular desks, ergonomic chairs, and storage systems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .works-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .work-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .work-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .work-image {
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .work-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .work-card:hover .work-image img {
+        transform: scale(1.05);
+    }
+
+    .work-content {
+        padding: 20px;
+    }
+
+    .work-content h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
+
+    .work-content p {
+        color: var(--gray-color);
+        line-height: 1.6;
+    }
+</style>
